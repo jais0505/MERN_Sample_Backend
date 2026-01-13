@@ -8,6 +8,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+    res.send("Server is running successfully!");
+});
+
 app.get('/api/greeting', (req, res) => {
     res.json({ message: "Hi from backend" });
 });
